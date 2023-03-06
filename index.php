@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="lucht"></div>
 <div class="ocean">
   <div class="wave"></div>
   <div class="wave"></div>
+  <div class="zee"></div>
 </div>
 </body>
 </html>
