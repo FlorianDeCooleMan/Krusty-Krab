@@ -59,11 +59,19 @@ body{
   }
   .zee{
     width: 100%;
-    height: 1000px;
-    background-color: #015871;
+    height: 2000px;
+    background: linear-gradient(to top left,
+            #0687a1 0%,
+            #0687a1 42.3%,
+            #015871 42.3%,
+            #015871 100%);
   }
-  header{
+  footer{
     	width: 100%;
       height: 100px;
-      background-color: yellow;
+      background-color: rgb(223, 223, 122);
+  }
+  .zand{
+    height: 100px;
+    width: 100%;
   }

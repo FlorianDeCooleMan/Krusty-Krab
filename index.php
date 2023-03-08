@@ -13,6 +13,9 @@
   <div class="wave"></div>
   <div class="wave"></div>
   <div class="zee"></div>
+  <footer>
+  </footer>
+  
 </div>
 </body>
 </html>
