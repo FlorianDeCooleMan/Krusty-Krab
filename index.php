@@ -11,7 +11,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Kanit:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header></header>
+<?php include_once('pdo.php');
+  ?>
+  <?php include_once('header.php');
+  ?>
   <div class="lucht">
     <img src="Krusty Krab logo.png" alt="krab">
     <h1>The krusty Krab</h1>
@@ -40,16 +43,17 @@
   <div class="bruin-vak">
     <div class="genieten"><h1>Samen Genieten</h1></div>
     <div class="eten-fotos">
-      <img src="glas.png" alt="glas" width="400px" height="400px">
-      <img src="pasta.png" alt="pasta" width="400px" height="400px">
-      <img src="brulee.png" alt="brulee" width="400px" height="400px">
+      <img src="glas.png" alt="glas" height="400px">
+      <img src="pasta.png" alt="pasta" height="400px">
+      <img src="taart.png" alt="taart" height="400px">
     </div>
-    <div class="menu-achtergrond"></div>
-  </div>
+    <div class="menu-achtergrond">
+    <a href="menu.php"><div class="menu-knop"><h1>Ontdek ons menu</h1></div></a>
+    </div>
+    </div>
   </div>
   <footer>
   </footer>
-  
 </div>
 </body>
 </html>
