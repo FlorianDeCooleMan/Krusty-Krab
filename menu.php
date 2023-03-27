@@ -8,15 +8,23 @@
     <title>Document</title>
 </head>
 <body>
+<?php include_once('pdo.php');
+  ?>
 <?php include_once('header.php');
+$data = $conn->query("SELECT * FROM menu1")->fetchAll();
+foreach ($data as $row) {
   ?>
     <div class="menu">
-      <div class="menu-item"></div>
+      <div class="menu-item">
+        <h1><?php echo $row['gerecht_en_prijs']; ?></h1>
+        <p><?php echo $row['beschrijving']; ?></p>
+      </div>
       <div class="menu-item"></div>
       <div class="menu-item"></div>
       <div class="menu-item"></div>
       <div class="menu-item"></div>
       <div class="menu-item"></div>
     </div>
+    <?php } ?>
 </body>
 </html>
