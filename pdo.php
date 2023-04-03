@@ -10,6 +10,5 @@ try {
     //echo "connected succesfully";
 } catch(PDOException $e){
     //echo "Connection failed: " . $e->getMessage();
-
 }
 ?>
