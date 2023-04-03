@@ -52,8 +52,8 @@
     </div>
     </div>
   </div>
-  <footer>
-  </footer>
+  <?php include_once('footer.php');
+  ?>
 </div>
 </body>
 </html>
