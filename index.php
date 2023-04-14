@@ -39,7 +39,6 @@
       In overleg is veel mogelijk.
       </p>
     </div>
-    <div class="bloem1"></div>
   <div class="bruin-vak">
     <div class="genieten"><h1>Samen Genieten</h1></div>
     <div class="eten-fotos">

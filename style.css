@@ -94,16 +94,6 @@ body{
     width: 100%;
     background-color: #d7ceb1;
   }
-  .bloem1{
-    position: absolute;
-    top: 200px;
-    right: 100px;
-    width: 200px;
-    height: 250px;
-    background-image: url(bloem.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
   .main-tekst{
     display: flex;
     justify-content: center;
@@ -164,7 +154,7 @@ body{
   background-color: white;
   color: black;
   border: solid 2px black;
-  height: 100px; 
+  height: 150px; 
   width: 250px;
   margin: 50px;
   margin-top: 150px;
@@ -174,12 +164,24 @@ body{
 }
 main{
   background-color: #015871;
-  height: 100%;
   color: white;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
+}
+.admin-main{
+  height: 100%;
+}
+.log-out{
+  margin-left: 20px;
+  height: 20px;
+  width: 90px;
+  background-color: white;
+  color: black;
+  border: solid, black, 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
