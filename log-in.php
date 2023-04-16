@@ -1,16 +1,5 @@
 <?php
 include_once('pdo.php');
-
-if($_POST['login']){
-  if($_POST['username'] != '' && $_POST['password'] != ''){
-    if($_POST['username'] == "admin" && $_POST['password'] == "12345"){
-      $_SESSION["username"] = $_POST["username"];
-      header('Location: admin.php');
-    }
-  } else {
-    $message =  'username of password is empty';
-  }
-}
 ?>
 
 <!DOCTYPE html>
@@ -22,30 +11,52 @@ if($_POST['login']){
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Kanit:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Kanit:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script>
+        function validateForm() {
+            var username = document.forms["Form"]["username"].value;
+            var password = document.forms["Form"]["password"].value;
+            if (username == "" || password == "") {
+                alert("Vul de gebruikersnaam en wachtwoord in");
+                return false;
+            }
+            if (username != "admin" || password != "12345") {
+                alert("Verkeerde gebruikersnaam of wachtwoord");
+                return false;
+            }
+        }
+    </script>
 </head>
 <body>
-<?php include_once('pdo.php');
-  ?>
-<?php include_once('header.php');
+    <?php
+        if(isset($_POST['login'])){
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+
+            if($username == 'admin' && $password == '12345'){
+                session_start();
+                $_SESSION['username'] = $username;
+                header('Location: admin.php');
+                
+            }
+            else{
+                echo "Invalid username or password";
+            }
+        }
     ?>
+
+    <?php include_once('header.php'); ?>
     <main class="admin-main">
-      <?php
-    if(isset($message))  
-                {  
-                     echo '<label class="text-danger">'.$message.'</label>';  
-                }  
-                ?>  
-      <form method="post">  
-                     <label>Username</label>  
-                     <input type="text" name="username" class="form-control" />  
-                     <br />  
-                     <label>Password</label>  
-                     <input type="password" name="password" class="form-control" />  
-                     <br />  
-                     <input type="submit" name="login" class="btn btn-info" value="Login" />  
-                </form>  </main>
-<?php include_once('footer.php');
-  ?>
+        <form name="Form" method="post" onsubmit="return validateForm()">
+            <label>Username</label>
+            <input type="text" name="username" class="form-control" />
+            <br />
+            <label>Password</label>
+            <input type="password" name="password" class="form-control" />
+            <br />
+            <input type="submit" name="login" class="btn btn-info" value="Login" />
+        </form>
+    </main>
+    <?php include_once('footer.php'); ?>
 </body>
 </html>

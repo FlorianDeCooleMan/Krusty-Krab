@@ -6,11 +6,11 @@ if(!isset($_GET['id']) || empty($_GET['id'])){
 
 $gerecht_id = intval($_GET['id']);
 if($gerecht_id == 0){
-   header('location: index.php?page=log-in');
+   header('location: index.php?page=admin');
 }
 
 $sql = "DELETE FROM menu1 WHERE gerecht_id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->execute([$gerecht_id]);
-header('location: index.php?page=log-in');
+header('location: index.php?page=admin');
 ?>
