@@ -48,10 +48,10 @@ include_once('pdo.php');
     <?php include_once('header.php'); ?>
     <main class="admin-main">
         <form name="Form" method="post" onsubmit="return validateForm()">
-            <label>Username</label>
+            <label>Username:<br></label>
             <input type="text" name="username" class="form-control" />
             <br />
-            <label>Password</label>
+            <label>Password:<br></label>
             <input type="password" name="password" class="form-control" />
             <br />
             <input type="submit" name="login" class="btn btn-info" value="Login" />

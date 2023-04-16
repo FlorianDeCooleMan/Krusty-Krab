@@ -63,7 +63,6 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    font-size: 50px;
     background-image: url(https://www.marlec.co.uk/wp-content/uploads/2015/06/clouds-and-blue-sky-background-hd-wallpapers-2560-x-1600-2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -185,3 +184,28 @@ main{
   justify-content: center;
   align-items: center;
 }
+.titel{
+  font-size: 90px;
+}
+@media (max-width: 920px) {
+  .titel {
+    font-size: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .titel {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .images {
+    height: 200px;
+    align-self: center;
+  }
+}
+@media (max-width: 620px) {
+  .images {
+    display: none;
+  }
+}
+

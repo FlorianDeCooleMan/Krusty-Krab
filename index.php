@@ -17,7 +17,7 @@
   ?>
   <div class="lucht">
     <img src="Krusty Krab logo.png" alt="krab">
-    <h1>The krusty Krab</h1>
+    <h1 class="titel">The krusty Krab</h1>
   </div>
 <div class="ocean">
   <div class="wave"></div>
@@ -42,9 +42,9 @@
   <div class="bruin-vak">
     <div class="genieten"><h1>Samen Genieten</h1></div>
     <div class="eten-fotos">
-      <img src="glas.png" alt="glas" height="400px">
+      <img src="glas.png" class="images" alt="glas" height="400px">
       <img src="pasta.png" alt="pasta" height="400px">
-      <img src="taart.png" alt="taart" height="400px">
+      <img src="taart.png" class="images" alt="taart" height="400px">
     </div>
     <div class="menu-achtergrond">
     <a href="menu.php"><div class="menu-knop"><h1>Ontdek ons menu</h1></div></a>

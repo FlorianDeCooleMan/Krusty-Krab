@@ -15,6 +15,39 @@ if(!isset($_SESSION["username"]))
      <link rel="stylesheet" href="style.css">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Kanit:ital,wght@1,300&display=swap" rel="stylesheet">
+
+<style>
+    table{
+      font-size: 15px;
+    }
+
+    @media (max-width: 1370px) {
+  table{
+     font-size: 12px;
+  }
+  
+}
+@media (max-width: 1131px) {
+  table{
+     font-size: 8px;
+  }
+  
+}
+@media (max-width: 800px) {
+  table{
+     font-size: 6px;
+  }
+  
+}
+@media (max-width: 1px) {
+  table{
+     font-size: 12px;
+  }
+  
+}
+
+</style>
+
  </head>
  <body>
 <?php include_once('header.php');
