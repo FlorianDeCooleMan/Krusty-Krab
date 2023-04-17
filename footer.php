@@ -1,5 +1,5 @@
 <footer>
-    <p>FlorianProGamer™&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    <p>FlorianGamer™&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
     <p>datum:</p>
 	<p id="datum"></p>
 
