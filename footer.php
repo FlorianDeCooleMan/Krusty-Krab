@@ -1,7 +1,7 @@
-<!-- alles wat in de footer staat -->
+<!-- alles wat in de footer komt -->
 <footer>
-	<p>FlorianProGamer™&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-	<p>datum:</p>
+    <p>FlorianProGamer™&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    <p>datum:</p>
 	<p id="datum"></p>
 
 	<!-- de javascript om de datum weer te geven -->
