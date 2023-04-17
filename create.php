@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<!-- de code om items toe te voegen -->
 <?php
 include_once('pdo.php');
 
@@ -26,9 +28,11 @@ if (isset($_POST["submit"])) {
 
 
 }
- ?>
+?>
+
 <body>
     <main>
+        <!-- de form om een nieuw gerecht te plaatsen -->
         <form action="create.php" method="post">
             <input type="hidden" name="gerecht_id">
             <input type="text" name="gerecht_id">
@@ -36,7 +40,9 @@ if (isset($_POST["submit"])) {
             <input type="text" name="beschrijving">
             <input type="submit" name="submit" value="submit">
         </form>
+        <!-- de link om terug de admin page te gaan -->
         <a href="admin.php">admin</a>
     </main>
 </body>
+
 </html>

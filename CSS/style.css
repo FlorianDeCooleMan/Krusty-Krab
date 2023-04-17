@@ -1,159 +1,182 @@
-html{
-    width: 100%;
-    height: 100%;
-    font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Kanit', sans-serif;
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Kanit', sans-serif;
 }
-body{
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    margin: 0px;
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0px;
 }
 
 .ocean {
-    height: 5%; 
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: #015871;
-  }
-  
-  .wave {
-    background: url(https://cdn.kcak11.com/codepen_assets/wave_animation/wave.svg) repeat-x;
-    position: absolute;
-    top: -198px;
-    width: 6400px;
-    height: 198px;
-    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-    transform: translate3d(0, 0, 0);
-  }
-  
-  .wave:nth-of-type(2) {
-    top: -175px;
-    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
-    opacity: 1;
-  }
-  
-  @keyframes wave {
-    0% {
-      margin-left: 0;
-    }
-    100% {
-      margin-left: -1600px;
-    }
-  }
-  @keyframes swell {
-    0%,
-      100% {
-      transform: translate3d(0, -25px, 0);
-    }
-    50% {
-      transform: translate3d(0, 5px, 0);
-    }
-  }
-  .endWave{
-      display:none;
-  }
-  .lucht{
-    width: 100%;
-    height: 650px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    background-image: url(https://www.marlec.co.uk/wp-content/uploads/2015/06/clouds-and-blue-sky-background-hd-wallpapers-2560-x-1600-2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .zee{
-    width: 100%;
-    height: 1800px;
-    background: linear-gradient(to top left,
-            #0687a1 0%,
-            #0687a1 42.3%,
-            #015871 42.3%,
-            #015871 100%);
-  }
-  footer{
-    	width: 100%;
-      height: 100px;
-      background-color: rgb(223, 223, 122);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  .zand{
-    height: 100px;
-    width: 100%;
-  }
-  .bruin-vak{
-    height: 700px;
-    width: 100%;
-    background-color: #d7ceb1;
-  }
-  .main-tekst{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 20px;
-    color: white;
-   margin-bottom: 90px;
-   margin-top: 30px;
-   text-align: center;
-  }
-  header{
-    width: 100%;
-    height: 100px;
-    background-color: yellow;
-    position: absolute;
-    top: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .genieten{
-    display: flex;
-    width: 100%;
-    height: 150px;
-    align-items: center;
-    justify-content: center;
-  }
-  .eten-fotos{
-    width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: space-around;
-  }
-  .menu-achtergrond{
-    width: 100%;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .menu-knop{
-    background-color: white;
-    width: 300px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: solid 2px black;
-  }
-  a{
-    text-decoration: none;
-    color: black;
+  height: 5%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #015871;
+}
+
+.wave {
+  /* de golf op index.php */
+  background: url(https://cdn.kcak11.com/codepen_assets/wave_animation/wave.svg) repeat-x;
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
   }
 
-.menu-item{
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+
+  0%,
+  100% {
+    transform: translate3d(0, -25px, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+
+.endWave {
+  display: none;
+}
+
+.lucht {
+  /* de lucht op index.php */
+  width: 100%;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-image: url(https://www.marlec.co.uk/wp-content/uploads/2015/06/clouds-and-blue-sky-background-hd-wallpapers-2560-x-1600-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.zee {
+  /* de zee achtergrond op index.php */
+  width: 100%;
+  height: 1800px;
+  background: linear-gradient(to top left,
+      #0687a1 0%,
+      #0687a1 42.3%,
+      #015871 42.3%,
+      #015871 100%);
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(223, 223, 122);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bruin-vak {
+  /* het bruine vlak op index.php*/
+  height: 700px;
+  width: 100%;
+  background-color: #d7ceb1;
+}
+
+.main-tekst {
+  /* de tekst op index.php */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 90px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: yellow;
+  position: absolute;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.genieten {
+  /* de tekst in het bruine vlak in index.php */
+  display: flex;
+  width: 100%;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.eten-fotos {
+  /* de fotos van het eten in het bruine vlak in index.php */
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-achtergrond {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-knop {
+  /* de menu knop in het bruine vlak in index.php */
+  background-color: white;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px black;
+}
+
+a {
+  /* de links */
+  text-decoration: none;
+  color: black;
+}
+
+.menu-item {
+  /* de menu items in menu.php */
   font-size: 10px;
   background-color: white;
   color: black;
   border: solid 2px black;
-  height: 150px; 
+  height: 150px;
   width: 350px;
   margin: 50px;
   margin-top: 150px;
@@ -161,7 +184,9 @@ body{
   align-items: center;
   text-align: center;
 }
-main{
+
+main {
+  /* de main */
   background-color: #015871;
   color: white;
   display: flex;
@@ -170,10 +195,13 @@ main{
   flex-wrap: wrap;
   width: 100%;
 }
-.admin-main{
+
+.admin-main {
   height: 100%;
 }
-.log-out{
+
+.log-out {
+  /* de log uit knop */
   margin-left: 20px;
   height: 20px;
   width: 90px;
@@ -184,30 +212,37 @@ main{
   justify-content: center;
   align-items: center;
 }
-.titel{
+
+.titel {
   font-size: 90px;
 }
+
+/* zorgen dat de website responsive is */
 @media (max-width: 920px) {
   .titel {
     font-size: 50px;
   }
 }
+
 @media (max-width: 600px) {
   .titel {
     display: none;
   }
 }
+
 @media (max-width: 900px) {
   .images {
     height: 200px;
     align-self: center;
   }
 }
+
 @media (max-width: 620px) {
   .images {
     display: none;
   }
 }
-p{
+
+p {
   margin: 5px;
 }
