@@ -12,7 +12,7 @@ if(!isset($_SESSION["username"]))
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
-     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="CSS/style.css">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Kanit:ital,wght@1,300&display=swap" rel="stylesheet">
 
@@ -74,7 +74,7 @@ foreach ($data as $row) {
                <td>
                       <a href="create.php?id=<?php echo $row['gerecht_id']; ?>">create</a> 
                       <a href="update.php?id=<?php echo $row['gerecht_id']; ?>">update</a>
-                <a href="delete.php?id=<?php echo $row['gerecht_id']; ?>">delete</a> 
+                <a href="delete.php?id=<?php echo $row['gerecht_id']; ?>"onclick="return confirm('Are you sure you want to delete this item?');">delete</a> 
 
                </td>
           </tr>

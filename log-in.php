@@ -9,11 +9,11 @@ include_once('pdo.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Kanit:ital,wght@1,300&display=swap" rel="stylesheet">
     <script>
-        function validateForm() {
+        function alerts() {
             var username = document.forms["Form"]["username"].value;
             var password = document.forms["Form"]["password"].value;
             if (username == "" || password == "") {
@@ -47,7 +47,7 @@ include_once('pdo.php');
 
     <?php include_once('header.php'); ?>
     <main class="admin-main">
-        <form name="Form" method="post" onsubmit="return validateForm()">
+        <form name="Form" method="post" onsubmit="return alerts()">
             <label>Username:<br></label>
             <input type="text" name="username" class="form-control" />
             <br />
