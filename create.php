@@ -18,9 +18,8 @@ if (isset($_POST["submit"])) {
 
 
 
-    $sql = "INSERT INTO menu1 (gerecht_id, gerecht_en_prijs, beschrijving) VALUES(?,?,?)";
+    $sql = "INSERT INTO menu1 (gerecht_en_prijs, beschrijving) VALUES(?,?)";
     $conn->prepare($sql)->execute([
-        $_POST['gerecht_id'],
         $_POST['gerecht_en_prijs'],
         $_POST['beschrijving'],
     ]);
@@ -34,8 +33,6 @@ if (isset($_POST["submit"])) {
     <main>
         <!-- de form om een nieuw gerecht te plaatsen -->
         <form action="create.php" method="post">
-            <input type="hidden" name="gerecht_id">
-            <input type="text" name="gerecht_id">
             <input type="text" name="gerecht_en_prijs">
             <input type="text" name="beschrijving">
             <input type="submit" name="submit" value="submit">
