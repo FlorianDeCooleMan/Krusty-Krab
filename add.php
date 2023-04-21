@@ -1,5 +1,5 @@
 <?php
-include_once('../pdo.php');
+include_once('pdo.php');
 
     $sql = ("INSERT INTO menu1(gerecht, prijs, beschrijving) VALUES (:gerecht,:prijs,:beschrijving)");
     $stmt = $conn -> prepare($sql);
@@ -8,5 +8,5 @@ include_once('../pdo.php');
     $stmt->bindParam(':beschrijving', $_POST['beschrijving']);
     $stmt -> execute();
 
-    header('Location: ../admin.php');
+    header('Location: admin.php');
 ?>

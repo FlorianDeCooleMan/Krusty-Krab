@@ -13,7 +13,7 @@
 <body>
     <main>
         <!-- de form om een nieuw gerecht te plaatsen -->
-        <form name="Form" action="./new/add.php" method="post" onsubmit="return validateForm()">
+        <form name="Form" action="add.php" method="post" onsubmit="return validateForm()">
             <input type="text" name="gerecht" placeholder="gerecht">
             <input type="text" name="prijs" placeholder="prijs">
             <input type="text" name="beschrijving" placeholder="beschrijving">
