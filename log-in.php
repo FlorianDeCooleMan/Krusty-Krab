@@ -1,5 +1,6 @@
 <?php
 include_once('pdo.php');
+$message = '';
 ?>
 
 <!DOCTYPE html>
@@ -36,6 +37,7 @@ include_once('pdo.php');
     <!-- zorgen dat je kan inloggen -->
     <?php
     if (isset($_POST['login'])) {
+
         $username = $_POST['username'];
         $password = $_POST['password'];
 
@@ -44,6 +46,8 @@ include_once('pdo.php');
             $_SESSION['username'] = $username;
             header('Location: admin.php');
 
+        } else {
+            $message = "login combinatie klompt niet";
         }
 
     }
@@ -52,6 +56,7 @@ include_once('pdo.php');
     <?php include_once('header.php'); ?>
     <main class="admin-main">
         <form name="Form" method="post" onsubmit="return alerts()">
+            <?php echo ($message == "" ? '' : $message);?>
             <label>Username:<br></label>
             <input type="text" name="username" class="form-control" />
             <br />

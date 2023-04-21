@@ -10,7 +10,7 @@
 <!-- zorgen dat je items kan updaten -->
 <?php
 include_once('pdo.php');
-
+$message = '';
 if (!isset($_GET['id']) || empty($_GET['id'])) {
     header('location: index.php?page=admin');
 }
@@ -26,21 +26,32 @@ $stmt->execute([$gerecht_id]);
 $result = $stmt->fetchAll();
 
         if (isset($_POST["submit"])) {
-            $gerecht_id = (isset($_POST['gerecht_id']) ? $_POST['gerecht_id'] : '');
-            $gerecht = (isset($_POST['gerecht']) ? $_POST['gerecht'] : '');
-            $prijs = (isset($_POST['prijs']) ? $_POST['prijs'] : '');
-            $beschrijving = (isset($_POST['beschrijving']) ? $_POST['beschrijving'] : '');
+            if($_POST['gerecht'] == ""){
+                $message = "gerecht mag niet leeg zijn";
+            }
+            if($_POST['prijs'] == ""){
+                $message = "prijs mag niet leeg zijn";
+            }
+            if($_POST['beschrijving'] == ""){
+                $message = "beschrijving mag niet leeg zijn";
+            }
 
+            if($message == ""){
+                $gerecht_id = (isset($_POST['gerecht_id']) ? $_POST['gerecht_id'] : '');
+                $gerecht = (isset($_POST['gerecht']) ? $_POST['gerecht'] : '');
+                $prijs = (isset($_POST['prijs']) ? $_POST['prijs'] : '');
+                $beschrijving = (isset($_POST['beschrijving']) ? $_POST['beschrijving'] : '');
 
-
-            $sql = "UPDATE menu1 SET gerecht=?, prijs=?, beschrijving=? WHERE gerecht_id = ?";
-            $conn->prepare($sql)->execute([
-                $_POST['gerecht'],
-                $_POST['prijs'],
-                $_POST['beschrijving'],
-                $_POST['gerecht_id'],
-            ]);
-            header('Location: admin.php');
+                $sql = "UPDATE menu1 SET gerecht=?, prijs=?, beschrijving=? WHERE gerecht_id = ?";
+                $conn->prepare($sql)->execute([
+                    $_POST['gerecht'],
+                    $_POST['prijs'],
+                    $_POST['beschrijving'],
+                    $_POST['gerecht_id'],
+                ]);
+                header('Location: admin.php');
+    
+            }
 
 
 
