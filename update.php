@@ -25,16 +25,6 @@ $stmt = $conn->prepare($sql);
 $stmt->execute([$gerecht_id]);
 $result = $stmt->fetchAll();
 
-
-$error = '';
-// if (isset($_POST["submit"])) {
-//     if (empty($_POST['$gerecht'])) {
-//         $error = 'error';
-//     }
-//     if (empty($_POST['$gerecht'])) {
-//         $error = 'error';
-//     }
-    if ($error == '') {
         if (isset($_POST["submit"])) {
             $gerecht_id = (isset($_POST['gerecht_id']) ? $_POST['gerecht_id'] : '');
             $gerecht = (isset($_POST['gerecht']) ? $_POST['gerecht'] : '');
@@ -55,15 +45,13 @@ $error = '';
 
 
         }
-    }
-//}
 ?>
 
 <body>
     <main>
         <!-- de form die je gebruikt om gerechten aan te passen -->
         <?php foreach ($result as $row) { ?>
-            <form action="" method="post">
+            <form name="Form" action="" method="post" onsubmit="return validateForm()">
                 <h2>Gerechten aanpassen :D</h2>
                 <input value="<?php echo $row['gerecht_id']; ?>" type="hidden" name="gerecht_id"
                     placeholder="gerecht_id verandert niet">
@@ -80,6 +68,7 @@ $error = '';
         <?php } ?>
         <a href="admin.php">admin</a>
     </main>
+    <script src="validate.js"></script>
 </body>
 
 </html>

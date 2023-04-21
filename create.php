@@ -13,15 +13,16 @@
 <body>
     <main>
         <!-- de form om een nieuw gerecht te plaatsen -->
-        <form action="./new/add.php" method="post">
-            <input type="text" name="gerecht">
-            <input type="text" name="prijs">
-            <input type="text" name="beschrijving">
+        <form name="Form" action="./new/add.php" method="post" onsubmit="return validateForm()">
+            <input type="text" name="gerecht" placeholder="gerecht">
+            <input type="text" name="prijs" placeholder="prijs">
+            <input type="text" name="beschrijving" placeholder="beschrijving">
             <input type="submit" name="submit" value="submit">
         </form>
         <!-- de link om terug de admin page te gaan -->
         <a href="admin.php">admin</a>
     </main>
+    <script src="validate.js"></script>
 </body>
 
 </html>
