@@ -66,7 +66,6 @@ if (!isset($_SESSION["username"])) {
         <td>id</td>
         <td>naam
         <td>
-        <td>actie</td>
 
       </tr>
       <?php $data = $conn->query("SELECT * FROM menu1")->fetchAll();
@@ -77,7 +76,10 @@ if (!isset($_SESSION["username"])) {
             <?php echo $row['gerecht_id']; ?>
           </td>
           <td>
-            <?php echo $row['gerecht_en_prijs']; ?>
+            <?php echo $row['gerecht']; ?>
+          </td>
+          <td>
+            <?php echo $row['prijs']; ?>
           </td>
           <td>
             <?php echo $row['beschrijving']; ?>

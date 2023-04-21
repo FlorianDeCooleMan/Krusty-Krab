@@ -21,7 +21,7 @@
   <?php include_once('header.php');
   ?>
   <div class="lucht">
-    <img src="Krusty Krab logo.png" alt="krab">
+    <img src="Images/Krusty Krab logo.png" alt="krab">
     <h1 class="titel">The Krusty Krab</h1>
   </div>
   <!-- de golven -->
@@ -51,9 +51,9 @@
           <h1>Geniet van onze specialiteiten</h1>
         </div>
         <div class="eten-fotos">
-          <img src="glas.png" class="images" alt="glas" height="400px">
-          <img src="pasta.png" alt="pasta" height="400px">
-          <img src="taart.png" class="images" alt="taart" height="400px">
+          <img src="Images/glas.png" class="images" alt="glas" height="400px">
+          <img src="Images/pasta.png" alt="pasta" height="400px">
+          <img src="Images/taart.png" class="images" alt="taart" height="400px">
         </div>
         <!-- de knop die leid naar het menu -->
         <div class="menu-achtergrond">

@@ -26,24 +26,37 @@ $stmt->execute([$gerecht_id]);
 $result = $stmt->fetchAll();
 
 
-if (isset($_POST["submit"])) {
-    $gerecht_id = (isset($_POST['gerecht_id']) ? $_POST['gerecht_id'] : '');
-    $gerecht_en_prijs = (isset($_POST['gerecht_en_prijs']) ? $_POST['gerecht_en_prijs'] : '');
-    $beschrijving = (isset($_POST['beschrijving']) ? $_POST['beschrijving'] : '');
+$error = '';
+// if (isset($_POST["submit"])) {
+//     if (empty($_POST['$gerecht'])) {
+//         $error = 'error';
+//     }
+//     if (empty($_POST['$gerecht'])) {
+//         $error = 'error';
+//     }
+    if ($error == '') {
+        if (isset($_POST["submit"])) {
+            $gerecht_id = (isset($_POST['gerecht_id']) ? $_POST['gerecht_id'] : '');
+            $gerecht = (isset($_POST['gerecht']) ? $_POST['gerecht'] : '');
+            $prijs = (isset($_POST['prijs']) ? $_POST['prijs'] : '');
+            $beschrijving = (isset($_POST['beschrijving']) ? $_POST['beschrijving'] : '');
 
 
 
-    $sql = "UPDATE menu1 SET gerecht_en_prijs=?, beschrijving=? WHERE gerecht_id = ?";
-    $conn->prepare($sql)->execute([
-        $_POST['gerecht_en_prijs'],
-        $_POST['beschrijving'],
-        $_POST['gerecht_id'],
-    ]);
-    header('Location: admin.php');
+            $sql = "UPDATE menu1 SET gerecht=?, prijs=?, beschrijving=? WHERE gerecht_id = ?";
+            $conn->prepare($sql)->execute([
+                $_POST['gerecht'],
+                $_POST['prijs'],
+                $_POST['beschrijving'],
+                $_POST['gerecht_id'],
+            ]);
+            header('Location: admin.php');
 
 
 
-}
+        }
+    }
+//}
 ?>
 
 <body>
@@ -54,8 +67,10 @@ if (isset($_POST["submit"])) {
                 <h2>Gerechten aanpassen :D</h2>
                 <input value="<?php echo $row['gerecht_id']; ?>" type="hidden" name="gerecht_id"
                     placeholder="gerecht_id verandert niet">
-                <input value="<?php echo $row['gerecht_en_prijs']; ?>" type="input" name="gerecht_en_prijs" id=""
-                    placeholder="gerecht_en_prijs">
+                <input value="<?php echo $row['gerecht']; ?>" type="input" name="gerecht" id=""
+                    placeholder="gerecht">
+                    <input value="<?php echo $row['prijs']; ?>" type="input" name="prijs" id=""
+                    placeholder="prijs">
                 <input value="<?php echo $row['beschrijving']; ?>" type="input" name="beschrijving" id=""
                     placeholder="beschrijving">
 

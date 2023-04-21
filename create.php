@@ -8,32 +8,14 @@
     <title>Document</title>
 </head>
 <!-- de code om items toe te voegen -->
-<?php
-include_once('pdo.php');
 
-if (isset($_POST["submit"])) {
-    $gerecht_id = (isset($_POST['gerecht_id']) ? $_POST['gerecht_id'] : '');
-    $gerecht_en_prijs = (isset($_POST['gerecht_en_prijs']) ? $_POST['gerecht_en_prijs'] : '');
-    $beschrijving = (isset($_POST['beschrijving']) ? $_POST['beschrijving'] : '');
-
-
-
-    $sql = "INSERT INTO menu1 (gerecht_en_prijs, beschrijving) VALUES(?,?)";
-    $conn->prepare($sql)->execute([
-        $_POST['gerecht_en_prijs'],
-        $_POST['beschrijving'],
-    ]);
-
-
-
-}
-?>
 
 <body>
     <main>
         <!-- de form om een nieuw gerecht te plaatsen -->
-        <form action="create.php" method="post">
-            <input type="text" name="gerecht_en_prijs">
+        <form action="./new/add.php" method="post">
+            <input type="text" name="gerecht">
+            <input type="text" name="prijs">
             <input type="text" name="beschrijving">
             <input type="submit" name="submit" value="submit">
         </form>

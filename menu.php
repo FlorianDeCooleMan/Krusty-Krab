@@ -24,8 +24,11 @@
       <!-- de menu items -->
       <div class="menu-item">
         <h1>
-          <?php echo $row['gerecht_en_prijs']; ?>
+          <?php echo $row['gerecht']; ?>
         </h1>
+        <h1>
+          <?php echo $row['prijs']; ?>
+      </h1>
         <p>
           <?php echo $row['beschrijving']; ?>
         </p>
